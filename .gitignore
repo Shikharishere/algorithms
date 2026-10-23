@@ -40,3 +40,6 @@ bin/
 
 # Kotlin folder?
 */META-INF/*
+
+#weird linux files
+*.Identifier
