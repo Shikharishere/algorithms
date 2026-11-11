@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Iterator;
 
 @SuppressWarnings("unchecked")
-public class DynamicArray<T> implements Iterable<T> {
+public class DynamicArray<T extends Comparable<T>> implements Iterable<T> {
     private static final int PREDEFINED_CAPACITY = 5; 
     private T[] data;
     private int capacity; // physical size
@@ -88,9 +88,9 @@ public class DynamicArray<T> implements Iterable<T> {
         Arrays.sort(data);
     } 
 
-    public void binarySearch() {
+    public void binarySearch(T element) {
         // will add my binary search code using java's built-in method rn
-        Arrays.binarySearch(data);
+        Arrays.binarySearch(data, element);
     }
 
     @Override 

@@ -1,3 +1,5 @@
+package graphs.datastructures;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -10,7 +12,7 @@ public class AdjacencyList {
     this.verticeCount = vertices;
     this.adjList = new ArrayList<>(verticeCount);
 
-    for(int i = 0; i < verticeCount; i++) {
+    for(int i = 0; i <= verticeCount + 1; i++) {
       adjList.add(new ArrayList<>());
     }
   }  
@@ -21,7 +23,7 @@ public class AdjacencyList {
     }
     
     adjList.get(x).add(y);
-    if(directed) {
+    if(!directed) {
       adjList.get(y).add(x);
     }
   }
@@ -51,6 +53,10 @@ public class AdjacencyList {
   public void printNeighbours(int x) {
     System.out.print("Vertices of " + x + " are: ");
     System.out.println(getNeighbours(x).toString());
+  }
+
+  public int size() {
+    return verticeCount;
   }
 
   public static void main(String[] args) {

@@ -1,5 +1,3 @@
-package com.shikhar.algorithms.sorting;
-
 import java.util.Arrays;
 
 public class QuickSort {

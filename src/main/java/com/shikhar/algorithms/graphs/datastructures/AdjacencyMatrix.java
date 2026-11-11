@@ -1,3 +1,5 @@
+package graphs.datastructures;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -16,7 +18,7 @@ public class AdjacencyMatrix {
     }
 
     matrix[x][y] = true;
-    if(directed) {
+    if(!directed) {
       matrix[y][x] = true;
     }
   }
